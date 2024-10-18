@@ -5,51 +5,59 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 const testimonials = [
   {
     name: "John Doe",
-    avatar: "A",
+    avatar: "JD",
     title: "Software Engineer",
     description: "This is the best application I've ever used!",
   },
   {
-    name: "John Doe",
-    avatar: "A",
-    title: "Software Engineer",
-    description: "This is the best application I've ever used!",
+    name: "Jane Smith",
+    avatar: "JS",
+    title: "UX Designer",
+    description: "The AI-generated designs are incredibly inspiring!",
   },
   {
-    name: "John Doe",
-    avatar: "A",
-    title: "Software Engineer",
-    description: "This is the best application I've ever used!",
+    name: "Mike Johnson",
+    avatar: "MJ",
+    title: "Content Creator",
+    description: "This tool has revolutionized my content creation process.",
   },
   {
-    name: "John Doe",
-    avatar: "A",
-    title: "Software Engineer",
-    description: "This is the best application I've ever used!",
+    name: "Emily Brown",
+    avatar: "EB",
+    title: "Marketing Manager",
+    description: "The AI-powered analytics have greatly improved our campaigns.",
   },
-];
+]
 
-export const LandingContent = () => {
+export default function LandingContent() {
   return (
-    <div className="px-10 pb-20">
-      <h2 className="text-center text-4xl text-white font-extrabold mb-10">Testimonials</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {testimonials.map((item) => (
-          <Card key={item.description} className="bg-[#192339] border-none text-white">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-x-2">
-                <div>
-                  <p className="text-lg ">{item.name}</p>
-                  <p className="text-zinc-400 text-sm">{item.title}</p>
-                </div>
-              </CardTitle>
-              <CardContent className="pt-4 px-0">{item.description}</CardContent>
-            </CardHeader>
-          </Card>
-        ))}
+    <div className="w-full flex justify-center px-4 py-20">
+      <div className="w-full max-w-6xl space-y-10">
+        <h2 className="text-center text-4xl text-white font-extrabold">
+          Testimonials
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {testimonials.map((item) => (
+            <Card 
+              key={item.name} 
+              className="bg-black bg-opacity-80 border-none text-white rounded-2xl hover:bg-opacity-100 transition-all duration-200"
+            >
+              <CardHeader>
+                <CardTitle className="flex items-center gap-x-4">
+                
+                  <div>
+                    <p className="text-lg font-semibold">{item.name}</p>
+                    <p className="text-zinc-400 text-sm">{item.title}</p>
+                  </div>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-4 px-6">
+                "{item.description}"
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
-  );
-};
-
-export default LandingContent;
+  )
+}
