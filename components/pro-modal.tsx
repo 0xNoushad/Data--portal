@@ -18,32 +18,32 @@ export const ProModal = () => {
 
   const tools = [
     {
-      label: "Conversation",
+      label: "generation",
       icon: MessageSquare,
       color: "text-violet-500",
       bgColor: "bg-violet-500/10",
     },
     {
-      label: "Music Generation",
-      icon: Music,
+      label: "  Generation",
+      icon: MessageSquare,
       color: "text-emerald-500",
       bgColor: "bg-emerald-500/10",
     },
     {
-      label: "Image Generation",
-      icon: ImageIcon,
+      label: "  Generation",
+      icon: MessageSquare,
       color: "text-pink-700",
       bgColor: "bg-pink-700/10",
     },
     {
-      label: "Video Generation",
-      icon: VideoIcon,
+      label: "  Generation",
+      icon: MessageSquare,
       color: "text-orange-700",
       bgColor: "bg-orange-700/10",
     },
     {
-      label: "Code Generation",
-      icon: Code,
+      label: "  Generation",
+      icon: MessageSquare,
       color: "text-green-700",
       bgColor: "bg-green-700/10",
     },
@@ -69,7 +69,7 @@ export const ProModal = () => {
         <DialogHeader>
           <DialogTitle className="flex justify-center flex-col items-center pb-2 gap-y-4">
             <div className="flex items-center gap-x-2 font-bold py-1">
-              Upgrade to Prometheus Pro
+              Upgrade to   Pro
               <Badge variant="premium" className="uppercase text-sm py-1">
                 pro
               </Badge>
